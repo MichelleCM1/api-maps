@@ -7,6 +7,15 @@
   <!-- These require runtime permissions on M -->
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  
+<!-- Added permissions -->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<!-- Optional permissions -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  
   <!-- END OPTIONAL PERMISSIONS -->
 
   <queries>
@@ -26,5 +35,12 @@
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
+    <meta-data
+       android:name="com.google.android.geo.API_KEY"
+       android:value="Your Google maps API Key Here"/>
+       <meta-data android:name="mapsKey" android:value="${MAPS_API_KEY}" />
+
+
+
   </application>
 </manifest>
